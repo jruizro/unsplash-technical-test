@@ -7,6 +7,16 @@ This microservice implements a service that returns [unsplash collections](https
 Service only have one end point (See API Swagger2 Documentation [here](/swagger-ui.html#/collections-controller/getCollectionsFilteredUsingGET).):
 >  GET /collection/all
 
+### To Run Microservice
+
+Execute commands:
+
+> ./gradlew clean build
+
+> java -jar build/libs/unsplash-technical-test-1.0.jar --jasypt.encryptor.password={SECRET_SALT_KEY}
+
+*NOTE: **SECRET_SALT_KEY** is mandatory to decrypt Unsplash ClientId key that is not allowed to be public*
+
 ### Design Notes
 
 DDD (Domain Driven Design) approach.
